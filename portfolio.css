@@ -139,6 +139,12 @@ div.divider{
     color: rgb(255, 0, 149);
     cursor: pointer;
 }
+.subtitle a{
+    color: transparent;
+}
+.subtitle a:hover{
+    color: #fff;
+}
 /* End of portfolio style */
 /* Start of responsiveness homepage */
 @media (max-width:1024px) {
