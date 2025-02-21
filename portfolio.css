@@ -104,6 +104,8 @@ div.divider{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 40px 30px;
+    gap: 20px;
+    background-color: #48c3c3;
 }
 .portfolio-item{
     position: relative;
@@ -115,19 +117,10 @@ div.divider{
     background-position: center;
     background-repeat: no-repeat;
 }
-/* .text-wrapper{
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;   
-} */
+
 .subtitle{
     position: absolute;
     top: 15px;
-    /* color: beige; */
     padding: 60px;
     transition: 1.5s;
     font-weight: 700;
@@ -176,6 +169,9 @@ div.divider{
         font-size: 22px;
         cursor: pointer;
     }
+    div.divider{
+        margin: 0 auto;
+    }
     .portfolio-wrapper{
         display: grid;
         grid-template-columns: 1fr;
@@ -206,9 +202,7 @@ div.divider{
     #navLink{
         display: none;
     }
-    /* #cancelNav{
-        margin-bottom: 0px;
-    } */
+
 }
 /* End of responsiveness homepage */
 
@@ -263,8 +257,11 @@ h1.about{
         background-color: #ecf5ec;
     }
     .profile-content{
-        margin-top: -120px;
+        margin-top: -40%;
         font-size: 1.3rem;
+    }
+    .profile-content h2{
+        margin-top: 20%;
     }
 }
 /* End of responsiveness for About page */
@@ -288,24 +285,25 @@ h1.about{
     margin-top: 5px;
 }
 .icons a{
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     background: lightseagreen;
     color: #fff;
     display: inline-block;
-    text-align: center;
-    border-radius: 100px;
-    padding-top: 14px;
+    align-items: center;
+    border-radius: 100%;
+    padding: 14px;
     margin: 15px 0;
 }
 a.arrowUp img{
     width: 40px;
     height: 40px;
-    right: 60px;
-    bottom: 60px;
+    right: 0;
+    bottom: 50px;
     border: 3px solid rgb(255, 0, 149);
     border-radius: 100px;
     position: fixed;
+    background-color: rgb(255, 0, 149);
 }
 .img-darken{
     transition: 1s;
@@ -313,9 +311,19 @@ a.arrowUp img{
 }
 /* End of styling for footer */
 /* Start of responsiveness for footer */
+@media (max-width: 1024px) {
+    a.arrowUp img{
+        height: 30px;
+        width: 30px;
+    }
+}
 @media (max-width:768px) {
     .foot{
         margin-top: 15px;
+    }
+    a.arrowUp img{
+        height: 20px;
+        width: 20px;
     }
 }
 /* end of responsiveness for footer */
