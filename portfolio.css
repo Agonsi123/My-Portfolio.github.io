@@ -193,6 +193,10 @@ div.divider{
     .subtitle:hover{
         color: #fff;
     }
+    .subtitle a:hover{
+        color: rgb(255, 0, 149);
+    }
+
     /* .cancel-button{
         margin-bottom: 10px;
     } */
