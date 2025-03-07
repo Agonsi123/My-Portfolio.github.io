@@ -1,167 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./portfolio.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./portfolio.css" />
     <script src="https://kit.fontawesome.com/11e1fca62a.js" crossorigin="anonymous"></script>
     <title>My portfolio</title>
-    
-</head>
-<body id="top">
+  </head>
+  <body id="top">
     <!-- Container -->
     <div class="container">
-        <!-- Header -->
+      <!-- Header -->
 
-        <header>
-            <div class="logo">
-                UDO AGONSI
+      <header>
+        <div class="logo">UDO AGONSI</div>
+        <nav id="navLink">
+          <div class="link-wrapper active-link">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#about">About</a>
+          </div>
+        </nav>
+        <nav id="mobileNav">
+          <div class="cancel-button">
+            <i class="fa-solid fa-circle-xmark" id="cancelNav" onclick="hideMenu()"></i>
+          </div>
+          <div class="link-wrapper active-link">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#about">About</a>
+          </div>
+        </nav>
+        <div>
+          <i class="fa fa-bars" id="bars" onclick="showMenu()"></i>
+        </div>
+      </header>
+
+      <!-- Portfolio -->
+      <main>
+        <h1 class="port">My Portfolio</h1>
+        <div class="divider"></div>
+        <section class="portfolio-wrapper">
+          <!-- BMI App -->
+          <div class="portfolio-item">
+            <div class="img-background" style="background-image: url('images/myBmi.jpg')"></div>
+            <div class="subtitle">
+              One page BMI App built for FemCode Africa Team project competition, August 2023
+              <a href="https://mybmi-check.netlify.app/" target="_blank">Click to view</a>
             </div>
-            <nav id="navLink">
-                <div class="link-wrapper active-link">
-                    <a href="index.html">Home</a>
-                </div>
-                <div class="link-wrapper">
-                    <a href="#about">About</a>
-                </div>
-            </nav>
-            <nav id="mobileNav">
-                <div class="cancel-button">
-                    <i class="fa-solid fa-circle-xmark" id="cancelNav" onclick="hideMenu()"></i>
-                </div>
-                <div class="link-wrapper active-link">
-                    <a href="index.html">Home</a>
-                </div>
-                <div class="link-wrapper">
-                    <a href="#about">About</a>
-                </div>
-            </nav>
-            <div>
-                <i class="fa fa-bars" id="bars" onclick="showMenu()"></i>
+          </div>
+
+          <!-- Cunningham website -->
+
+          <div class="portfolio-item">
+            <div
+              class="img-background"
+              style="background-image: url('images/cunningham.jpg')"
+            ></div>
+            <div class="subtitle">
+              Cunningham Family Overseas website built for a client. Went live March 7th, 2025.
+              <a href="https://www.cunninghamfamilyoverseas.org/" target="_blank">Click to view</a>
             </div>
-        </header>
+          </div>
 
-        <!-- Portfolio -->
-        <main>
-            <h1 class="port">My Portfolio</h1>
-            <div class="divider"></div>
-            <section class="portfolio-wrapper">
-                <!-- BMI App -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/myBmi.jpg');"></div>
-                    <div class="subtitle">
-                        One page BMI App built for FemCode Africa Team project competition, August 2023
-                        <a href="https://mybmi-check.netlify.app/" target="_blank">Click to view</a>
-                        
-                    </div>
-                </div>
-                
-                <!-- Cunningham website -->
-                
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/cunningham.jpg');"></div>
-                    <div class="subtitle">
-                        Cunningham Family Overseas website built for a client.Yet to go live. February 2025
-                        <a href="https://cunninghamfamily-git-main-udodirim-agonsis-projects.vercel.app/" target="_blank">Click to view</a>
-                        
-                    </div>
-                </div>
-
-                <!-- Music App Landing page -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/SoundWeb.jpg')"></div>
-                    <div class="subtitle">
-                        Landing page of my Music website built as an assignment at Visiola Foundation bootcamp, April 2023
-                        <a href="https://my-music-app-black.vercel.app/" target="_blank">Click to view</a>
-                    </div>
-                    
-                </div>
-
-                <!-- Landing Page design -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/LandingPageDesign.jpg');"></div>
-                    <div class="subtitle">
-                        Four paged design, built using ReactJs, a promotional task done in KodeCamp BootCamp, June 2024.
-                        <a href="https://land-page-design.vercel.app/" target="_blank">Click to view</a>  
-                    </div>
-                    
-                </div>
-
-                <!-- AgricTech Website -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/agricTech.jpg');"></div>
-                    <div class="subtitle">
-                        AgricTech website landing page, built with HTML and CSS for Enforca Mentorship program, not yet responsive, project ongoing. 2025.
-                        <a href="https://agrictech-website.vercel.app/" target="_blank">Click to view</a>
-                        
-                    </div>
-                </div>
-
-                <!-- Techies World Website -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/techiesWorld.jpg');"></div>
-                    <div class="subtitle">
-                        Techies world App built as classwork in Visiola Foundation bootcamp. Responsive, 2023
-                        <a href="https://techies-world-psi.vercel.app/" target="_blank">Click to view</a>
-                    </div>
-                </div>
-                <!-- Multiplication App -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/multiplicationApp.jpg');"></div>
-                    <div class="subtitle">
-                        A multiplication App built as classwork in Visiola Foundation bootcamp 2023
-                        <a href="https://multiplication-app-iota.vercel.app/" target="_blank">Click to view</a>
-                        
-                    </div>
-                </div>
-                <!-- Resume Builder App -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/resumerBuilder.jpg');"></div>
-                    <div class="subtitle">
-                        Resume Builder, built as a project for Women in Defi Cohort 1, in 2024, using React framework.
-                        <a href="https://resume-builder-pink-three.vercel.app/" target="_blank">Click to view</a>
-                    </div>
-                </div>
-                <!-- Digital Clock App -->
-                <div class="portfolio-item">
-                    <div class="img-background" style="background-image: url('images/digitalClock.jpg');"></div>
-                    <div class="subtitle">
-                        Digital clock built using Html, CSS and JavaScript as classwork in Visiola Foundation bootcamp 2023
-                    </div>
-                </div>
-            </section>
-            <h1 class="about" id="about">About Me</h1>
-            <div class="divider" style="margin-top: -15px;"></div>
-            <section class="two-column">
-                <div class="profile-image">
-                    <img src="./images/profile.jpg" alt="" width="200px" height="200px">
-                </div>
-                <div class="profile-content">
-                    <h2>Hi, thank you for visiting my site.</h2>
-                    <p>I am Udo Lydia Agonsi. A Software Developer, specializing in Frontend Development. I started my tech career journey with building business applications using Microsoft SharePoint, PowerApps and Power Automate. Then I went on to acquire skills in Html, CSS, JavaScript and Web Development(Using React.js). I have some training on Product Design(UI/UX) and the use of tools like Figma, Figjam and Balsamiq.
-                    </p>
-                    <p>My passion lies in creating solutions that blend creativity with technology and my work is defined by commitment to excellence. Presently, I am looking towards learning TypeScript and Next.js and i'm dedicated to continuous learning in product management.
-                    Let's collaborate to create innovative digital experiences.
-                    </p>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="foot">
-                <h1>Get In Touch</h1>
-                <div class="divider"></div>
-                <h3>udoagon@yahoo.com.au</h3>
-                <p>Do you have an awesome idea or product you would like me to jump on, kindly feel free to reachout</p>
-                <div class="icons">
-                    <a href="https://linkedin.com/in/udo-agonsi-abdi-03b0b614"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://twitter.com/AgonsiUdo25883"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/agonsi123"><i class="fa fa-github"></i></a>
-                </div>
-                <a class="arrowUp" href="#top"><img src="images/arrowUpWhite.svg" alt=""></a>
+          <!-- Music App Landing page -->
+          <div class="portfolio-item">
+            <div class="img-background" style="background-image: url('images/SoundWeb.jpg')"></div>
+            <div class="subtitle">
+              Landing page of my Music website built as an assignment at Visiola Foundation
+              bootcamp, April 2023
+              <a href="https://my-music-app-black.vercel.app/" target="_blank">Click to view</a>
             </div>
-        </footer>
+          </div>
+
+          <!-- Landing Page design -->
+          <div class="portfolio-item">
+            <div
+              class="img-background"
+              style="background-image: url('images/LandingPageDesign.jpg')"
+            ></div>
+            <div class="subtitle">
+              Four paged design, built using ReactJs, a promotional task done in KodeCamp BootCamp,
+              June 2024.
+              <a href="https://land-page-design.vercel.app/" target="_blank">Click to view</a>
+            </div>
+          </div>
+
+          <!-- AgricTech Website -->
+          <div class="portfolio-item">
+            <div class="img-background" style="background-image: url('images/agricTech.jpg')"></div>
+            <div class="subtitle">
+              AgricTech website landing page, built with HTML and CSS for Enforca Mentorship
+              program, not yet responsive, project ongoing. 2025.
+              <a href="https://agrictech-website.vercel.app/" target="_blank">Click to view</a>
+            </div>
+          </div>
+
+          <!-- Techies World Website -->
+          <div class="portfolio-item">
+            <div
+              class="img-background"
+              style="background-image: url('images/techiesWorld.jpg')"
+            ></div>
+            <div class="subtitle">
+              Techies world App built as classwork in Visiola Foundation bootcamp. Responsive, 2023
+              <a href="https://techies-world-psi.vercel.app/" target="_blank">Click to view</a>
+            </div>
+          </div>
+          <!-- Multiplication App -->
+          <div class="portfolio-item">
+            <div
+              class="img-background"
+              style="background-image: url('images/multiplicationApp.jpg')"
+            ></div>
+            <div class="subtitle">
+              A multiplication App built as classwork in Visiola Foundation bootcamp 2023
+              <a href="https://multiplication-app-iota.vercel.app/" target="_blank"
+                >Click to view</a
+              >
+            </div>
+          </div>
+          <!-- Resume Builder App -->
+          <div class="portfolio-item">
+            <div
+              class="img-background"
+              style="background-image: url('images/resumerBuilder.jpg')"
+            ></div>
+            <div class="subtitle">
+              Resume Builder, built as a project for Women in Defi Cohort 1, in 2024, using React
+              framework.
+              <a href="https://resume-builder-pink-three.vercel.app/" target="_blank"
+                >Click to view</a
+              >
+            </div>
+          </div>
+          <!-- Digital Clock App -->
+          <div class="portfolio-item">
+            <div
+              class="img-background"
+              style="background-image: url('images/digitalClock.jpg')"
+            ></div>
+            <div class="subtitle">
+              Digital clock built using Html, CSS and JavaScript as classwork in Visiola Foundation
+              bootcamp 2023
+            </div>
+          </div>
+        </section>
+        <h1 class="about" id="about">About Me</h1>
+        <div class="divider" style="margin-top: -15px"></div>
+        <section class="two-column">
+          <div class="profile-image">
+            <img src="./images/profile.jpg" alt="" width="200px" height="200px" />
+          </div>
+          <div class="profile-content">
+            <h2>Hi, thank you for visiting my site.</h2>
+            <p>
+              I am Udo Lydia Agonsi. A Software Developer, specializing in Frontend Development. I
+              started my tech career journey with building business applications using Microsoft
+              SharePoint, PowerApps and Power Automate. Then I went on to acquire skills in Html,
+              CSS, JavaScript and Web Development(Using React.js). I have some training on Product
+              Design(UI/UX) and the use of tools like Figma, Figjam and Balsamiq.
+            </p>
+            <p>
+              My passion lies in creating solutions that blend creativity with technology and my
+              work is defined by commitment to excellence. Presently, I am looking towards learning
+              TypeScript and Next.js and i'm dedicated to continuous learning in product management.
+              Let's collaborate to create innovative digital experiences.
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="foot">
+          <h1>Get In Touch</h1>
+          <div class="divider"></div>
+          <h3>udoagon@yahoo.com.au</h3>
+          <p>
+            Do you have an awesome idea or product you would like me to jump on, kindly feel free to
+            reachout
+          </p>
+          <div class="icons">
+            <a href="https://linkedin.com/in/udo-agonsi-abdi-03b0b614"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a href="https://twitter.com/AgonsiUdo25883"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/agonsi123"><i class="fa fa-github"></i></a>
+          </div>
+          <a class="arrowUp" href="#top"><img src="images/arrowUpWhite.svg" alt="" /></a>
+        </div>
+      </footer>
     </div>
     <script src="portfolio.js"></script>
-</body>
+  </body>
 </html>
