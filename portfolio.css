@@ -244,7 +244,7 @@ h1.about{
         font-size: 1.2rem;
     }
     .profile-content p{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 @media (max-width:768px) {
@@ -259,9 +259,11 @@ h1.about{
     .profile-content{
         margin-top: -40%;
         font-size: 1.3rem;
+        text-align: center;
     }
     .profile-content h2{
         margin-top: 20%;
+        text-align: center;
     }
 }
 /* End of responsiveness for About page */
