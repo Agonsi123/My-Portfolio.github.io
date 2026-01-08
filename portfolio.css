@@ -16,7 +16,7 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 24px;
     background: lightseagreen;
     align-items: center;
 }
@@ -68,7 +68,8 @@ nav{
 
 #cancelNav{
     float: right;
-    margin-right: 10px;
+    margin-right: 14px;
+    margin-top: 15px;
 }
 #bars{
     display: none;
@@ -136,13 +137,10 @@ div.divider{
     color: rgb(255, 0, 149);
     cursor: pointer;
 }
-.subtitle a{
-    color: transparent;
-}
-/* .subtitle a:hover{
-    color: #fff;
-} */
 
+.portfolio-btn{
+    margin-top: 50px;
+}
 
 .portfolio-btn a{
     color: rgb(255, 0, 149);
@@ -160,7 +158,7 @@ div.divider{
         margin-top: 38px;
     }
     .subtitle{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 }
 @media (max-width:768px) {
@@ -203,6 +201,9 @@ div.divider{
     }
     .subtitle:hover{
         color: #fff;
+    }
+    .portfolio-btn{
+        margin-top: 30px;
     }
     #bars{
         display: inline;
@@ -376,7 +377,20 @@ h1.about{
     border: #48c3c3;
     color: #fff;
 }
+/* Start responsiveness Contact */
+@media (max-width:1024px) {
+    .contact-wrapper{
+        width: 84%;
+    }
+}
+@media (max-width:768px) {
+    .contact-wrapper{
+        width: 84%;
+    }
+}
+/* End responsiveness Contact */
 /* End styling for contact */
+
 /* Start of Styling for footer */
 .foot{
     background-color: #f0f0f0;
