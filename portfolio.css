@@ -91,7 +91,7 @@ h1, .h1, h2, .h2{
     color: lightseagreen;
     text-align: center;
 }
-h1.port, .about, .skill{
+h1.port, .about, .skill, .contact{
     font-size: 2.5rem;
 }
 h1.port{
@@ -124,13 +124,14 @@ div.divider{
 .subtitle{
     position: absolute;
     top: 15px;
-    padding: 60px;
+    padding: 40px;
     transition: 1.5s;
     font-weight: 700;
     color: transparent;
 }
 
 .subtitle:hover{
+    font: 0.9rem;
     font-weight: 700;
     color: rgb(255, 0, 149);
     cursor: pointer;
@@ -138,9 +139,10 @@ div.divider{
 .subtitle a{
     color: transparent;
 }
-.subtitle a:hover{
+/* .subtitle a:hover{
     color: #fff;
-}
+} */
+
 
 .portfolio-btn a{
     color: rgb(255, 0, 149);
@@ -158,7 +160,7 @@ div.divider{
         margin-top: 38px;
     }
     .subtitle{
-        font-size: 11px;
+        font-size: 0.7rem;
     }
 }
 @media (max-width:768px) {
@@ -189,7 +191,7 @@ div.divider{
         display: grid;
         grid-template-columns: 1fr;
     }
-    h1.port, .about, .skill{
+    h1.port, .about, .skill, .contact{
         font-size: 2rem;
     }
     h1.port{
@@ -197,18 +199,11 @@ div.divider{
     }
     .subtitle{
         padding: 70px;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
     .subtitle:hover{
         color: #fff;
     }
-    .subtitle a:hover{
-        color: rgb(255, 0, 149);
-    }
-
-    /* .cancel-button{
-        margin-bottom: 10px;
-    } */
     #bars{
         display: inline;
     }
@@ -332,8 +327,56 @@ h1.about{
     }
 }
 /* End responsiveness My Skills */
-
 /* End of styling for My skills */
+
+/* Start of styling for contact */
+.contact-wrapper{
+    width: 50%;
+    margin: auto;
+}
+.contact-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border:  1px solid red; */
+}
+.contact-wrapper label{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contact-wrapper input, .contact-wrapper textarea{
+    width: 100%;
+    padding: 16px 12px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.contact-wrapper input::placeholder{
+    color: #ccc;
+    font-size: 12px;
+}
+.contact-wrapper textarea::placeholder{
+    color: #ccc;
+    font-size: 12px;
+}
+.contact-wrapper input:focus{
+    outline: 3px solid #48c3c3;
+    border-color: transparent;
+}
+.contact-wrapper textarea:focus{
+    outline: 3px solid #48c3c3;
+    border-color: transparent;
+}
+.contact-wrapper button{
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #48c3c3;
+    border: #48c3c3;
+    color: #fff;
+}
+/* End styling for contact */
 /* Start of Styling for footer */
 .foot{
     background-color: #f0f0f0;
