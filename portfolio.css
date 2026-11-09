@@ -87,7 +87,7 @@ header .fa{
     color: rgb(255, 0, 149) !important;
 } */
 /* End of Navbar */
-/* Portfolio styles */
+/* My Projects styles */
 h1, .h1, h2, .h2{
     color: lightseagreen;
     text-align: center;
@@ -96,7 +96,7 @@ h1.port, .about, .skill, .contact{
     font-size: 2.5rem;
 }
 h1.port{
-    margin-top: 100px;
+    margin-top: 10px;
 }
 div.divider{
     width: 50px;
@@ -151,7 +151,7 @@ div.divider{
 .portfolio-btn a:hover{
     color: #fff;
 }
-/* End of portfolio style */
+/* End of My projects style */
 /* Start of responsiveness homepage */
 @media (max-width:1024px) {
     h1.port{
@@ -217,7 +217,7 @@ div.divider{
 
 /* Start for About page style*/
 h1.about{
-    margin: 100px 0 40px 0;
+    margin: 60px 0 40px 0;
 }
 .two-column{
     display: grid;
@@ -262,7 +262,7 @@ h1.about{
 }
 @media (max-width:768px) {
     h1.about{
-        margin-top: 20px;
+        margin-top: 30px;
     }
     .two-column{
         display: grid;
@@ -275,7 +275,7 @@ h1.about{
         width: 100%;
     }
     .profile-content{
-        margin-top: -40%;
+        margin-top: -57%;
         font-size: 1.3rem;
         text-align: center;
     }
@@ -287,6 +287,9 @@ h1.about{
 /* End of responsiveness for About page */
 
 /* Start of styling for My skills */
+h1.skill{
+    margin-top: 60px;
+}
 .skill-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -317,10 +320,13 @@ h1.about{
     }
 }
 @media (max-width:768px ) {
+        h1.skill{
+        margin-top: 15px;
+    }
     .skill-wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        margin: 30px 0;
+        margin: 50px 0;
         padding: 0;
     }
     .skill-item{
@@ -371,10 +377,11 @@ h1.about{
     border-color: transparent;
 }
 .contact-wrapper button{
-    padding: 12px;
-    margin-top: 10px;
+    padding: 16px 12px;
+    margin-top: 25px;
     background-color: #48c3c3;
     border: #48c3c3;
+    border-radius: 8px;
     color: #fff;
 }
 /* Start responsiveness Contact */
@@ -384,8 +391,12 @@ h1.about{
     }
 }
 @media (max-width:768px) {
+    h1.contact{
+        margin-top: -25px;
+    }
     .contact-wrapper{
         width: 84%;
+        margin-top: 30px;
     }
 }
 /* End responsiveness Contact */
@@ -397,11 +408,11 @@ h1.about{
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 5px 0;
-    /* margin-top: -40px; */
+    padding: 10px 0;
+    margin-top: 40px;
 }
 .foot h1{
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 .foot h3{
     margin-bottom: 10px;
