@@ -244,9 +244,9 @@ h1.about{
 /* End of about page style */
 /* Start of responsiveness for About page */
 @media (max-width:1024px) {
-    h1.about{
+    /* h1.about{
         margin-top: 25px;
-    }
+    } */
     .two-column{
         margin: 0 50px;
     }
@@ -261,9 +261,6 @@ h1.about{
     }
 }
 @media (max-width:768px) {
-    h1.about{
-        margin-top: 30px;
-    }
     .two-column{
         display: grid;
         grid-template-columns: 1fr;
@@ -275,7 +272,7 @@ h1.about{
         width: 100%;
     }
     .profile-content{
-        margin-top: -57%;
+        margin-top: -37%;
         font-size: 1.3rem;
         text-align: center;
     }
