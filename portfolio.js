@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector(".portfolio-track");
     const slides = document.querySelectorAll(".portfolio-item")
     const prevBtn = document.querySelector(".carousel-prev");
+    const nextBtn = document.querySelector(".carousel-next");
     const dotsContainer = document.querySelector(".carousel-dots");
 
     // Stop if the portofolio elements are not found
