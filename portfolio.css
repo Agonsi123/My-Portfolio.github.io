@@ -106,13 +106,22 @@ div.divider{
 }
 .portfolio-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin: 40px 30px;
-    gap: 20px;
+    gap: 15px;
     background-color: #48c3c3;
+}
+/* On desktop(display: contents), this allows the 
+nine portfolio-item elements to continue
+participating in the existing 3-column 
+CSS grid 
+**/
+.portfolio-track{
+    display: contents;
 }
 .portfolio-item{
     position: relative;
+    min-width: 0;
 }
 .img-background{
     height: 200px;
@@ -125,14 +134,16 @@ div.divider{
 .subtitle{
     position: absolute;
     top: 15px;
-    padding: 40px;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
     transition: 1.5s;
     font-weight: 700;
     color: transparent;
 }
 
 .subtitle:hover{
-    font: 0.9rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: rgb(255, 0, 149);
     cursor: pointer;
@@ -150,6 +161,11 @@ div.divider{
 }
 .portfolio-btn a:hover{
     color: #fff;
+}
+
+/* Hide carousel control on web or desktop view */
+.carousel-controls{
+    display: none;
 }
 /* End of My projects style */
 /* Start of responsiveness homepage */
@@ -182,12 +198,11 @@ div.divider{
         font-size: 22px;
         cursor: pointer;
     }
-    div.divider{
-        margin: 0 auto;
+    #bars{
+        display: inline;
     }
-    .portfolio-wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
+    #navLink{
+        display: none;
     }
     h1.port, .about, .skill, .contact{
         font-size: 2rem;
@@ -195,21 +210,129 @@ div.divider{
     h1.port{
         margin-top: 40px;
     }
+    div.divider{
+        margin: 0 auto;
+    }
+    .portfolio-wrapper{
+        display: block;
+        margin: 30px  ;
+        background-color: transparent;
+        overflow: hidden;
+        max-width: 100%;
+        width: auto;
+        box-sizing: border-box;
+    }
+    .portfolio-track{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+        touch-action: pan-y;
+        box-sizing: border-box;
+    }
+    .portfolio-item{
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 0;
+        height: 280px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 2px solid #48c3c3;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .img-background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     .subtitle{
-        padding: 70px;
-        font-size: 0.75rem;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        box-sizing: border-box;
+        max-height: 50%;
+        overflow-y: auto;
+        overflow-wrap: anywhere;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(247, 238, 238, 0.9);
+        color: #333;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.5;
+        transition: none;
     }
     .subtitle:hover{
-        color: #fff;
+        color: #333;
     }
     .portfolio-btn{
-        margin-top: 30px;
+        margin-top: 10px;
+        flex-shrink: 0;
     }
-    #bars{
-        display: inline;
+    .portfolio-btn a{
+        display: inline-block;
+        background-color: #ff0095;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 0.8rem;
     }
-    #navLink{
-        display: none;
+    /* Carousel navigation */
+    .carousel-controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .carousel-prev,
+    .carousel-next{
+        width: 35px;
+        height: 35px;
+        border: none;
+        border: 50%;
+        background-color: #48c3c3;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .carousel-prev:disabled,
+    .carousel-next:disabled{
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
+    /* Indicator dots */
+    .carousel-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+    }
+    .carousel-dot{
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    .carousel-dot.active{
+        width: 12px;
+        height: 12px;
+        background-color: #ff0095;
     }
 
 }
@@ -231,7 +354,7 @@ h1.about{
     border-radius: 8px;
 }
 .profile-content{
-    padding: 30px;
+    padding: 30px 0;
     text-align: justify;
 }
 .profile-content h2{
@@ -244,9 +367,6 @@ h1.about{
 /* End of about page style */
 /* Start of responsiveness for About page */
 @media (max-width:1024px) {
-    /* h1.about{
-        margin-top: 25px;
-    } */
     .two-column{
         margin: 0 50px;
     }
@@ -342,7 +462,6 @@ h1.skill{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* border:  1px solid red; */
 }
 .contact-wrapper label{
     display: flex;
