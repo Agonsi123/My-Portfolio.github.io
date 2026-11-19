@@ -39,14 +39,6 @@ nav{
     padding: 8px 12px;
     position: relative;
 }
-/* .link-wrapper{
-    margin-right: 20px;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    height: 20px;
-    transition: border-bottom 0.9s;
-    border-bottom: 1px solid transparent;
-} */
 .link-wrapper a{
     font-size: 0.95rem;
     color: #fff;
@@ -54,9 +46,6 @@ nav{
     transition: color 0.9s;
     
 }
-/* .link-wrapper:hover{
-    border-bottom: 1px solid black;
-} */
 .link-wrapper a:hover{
     border-bottom: 1px solid #fff;
     font-weight: bold;
@@ -80,12 +69,7 @@ header .fa{
     font-size: 22px;
     cursor: pointer;
 }
-/* .active-link{
-    border-bottom: 1px solid black;
-} */
-/* .active-link a{
-    color: rgb(255, 0, 149) !important;
-} */
+
 /* End of Navbar */
 /* My Projects styles */
 h1, .h1, h2, .h2{
@@ -289,7 +273,7 @@ CSS grid
         border-radius: 8px;
         font-size: 0.8rem;
     }
-    /* Carousel navigation */
+    /* Carousel navigation styling */
     .carousel-controls{
         display: flex;
         align-items: center;
@@ -499,6 +483,7 @@ h1.skill{
     border: #48c3c3;
     border-radius: 8px;
     color: #fff;
+
 }
 /* Start responsiveness Contact */
 @media (max-width:1024px) {
